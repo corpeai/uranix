@@ -234,7 +234,7 @@ const Navbar = () => {
               {/* Footer */}
               <div className="p-4 border-t border-white/10">
                 <p className="text-xs text-gray-500 text-center">
-                  Uranix v1.0 • Powered by Solana
+                  Solanica Finance Private v1.0 • Powered by Solana
                 </p>
               </div>
             </div>
