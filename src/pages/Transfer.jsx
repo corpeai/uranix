@@ -191,7 +191,7 @@ const Transfer = () => {
       <div className="space-y-2">
         <h1 className="text-4xl font-bold text-white">Private Transfer</h1>
         <p className="text-gray-400">
-          Send SOL and tokens privately using Uranix
+          Send SOL and tokens privately using Solanica Finance Private
         </p>
       </div>
 
