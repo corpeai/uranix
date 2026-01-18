@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
           {/* Credits */}
           <div className="flex items-center space-x-2 text-sm text-gray-400">
-            <span>Built with</span>
+            <span>Private transfers on Solana powered by Bulletproofs. Send funds without exposing your transaction history.</span>
             <Heart className="w-4 h-4 text-green-500 fill-green-500" />
             <span>by Solanica Finance Team</span>
           </div>
@@ -45,7 +45,7 @@ const Footer = () => {
         {/* Additional Info */}
         <div className="mt-6 pt-6 border-t border-white/5 text-center">
           <p className="text-xs text-gray-500">
-            Powered by Solana Blockchain • Secured with Wallet Adapter
+           Powered by Solana Blockchain • Shadow Wire
           </p>
         </div>
       </div>
