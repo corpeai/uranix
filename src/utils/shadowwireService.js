@@ -352,24 +352,30 @@ export const getSupportedTokens = () => {
       "decimals": 6,
       icon: "https://solanicafinance.pro/logo.webp",
     },
+     {
+      "mint": "So11111111111111111111111111111111111111112",
+      symbol: "SOL",
+      name: "Solana",
+      decimals: 9,
+      icon: "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/So11111111111111111111111111111111111111112/logo.png",
+    }, 
     {
-      "mint": "oreoU2P8bN6jkk3jbaiVxYnG1dCXcYxwhwyK9jSybcp",
-      "symbol": "ORE",
-      "decimals": 11,
+      "mint": "4k3Dyjzvzp8eMZWUXbBCjEvwSkkk59S5iCNLY3QrkX6R",
+      "symbol": "RAY",
+      "decimals": 6,
+      icon: "https://img-v1.raydium.io/icon/4k3Dyjzvzp8eMZWUXbBCjEvwSkkk59S5iCNLY3QrkX6R.png",
     },
     {
       "mint": "2fbBGNkpmPmPa3aTMqHV4czFUWshofxbAmrbyaVZmy7q",
       "symbol": "ZEC",
       "decimals": 9,
-      "fee_amount": 0,
-      "enabled": true
+      icon: "https://img-v1.raydium.io/icon/A7bdiYdS5GjqGFtxf17ppRHtDKPkkRqbKtR27dxvQXaS.png",
     },
     {
       "mint": "CzFvsLdUazabdiu9TYXujj4EY495fG7VgJJ3vQs6bonk",
       "symbol": "RADR",
       "decimals": 9,
-      "fee_amount": 0,
-      "enabled": true
+      icon: "https://www.radrlabs.io/icons/radricon.jpg",
     },
     {
       "mint": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
@@ -388,13 +394,6 @@ export const getSupportedTokens = () => {
       "symbol": "USD1",
       "decimals": 6,
       icon: "https://img-v1.raydium.io/icon/USD1ttGY1N17NEEHLmELoaybftRBUSErhqYiQzvEmuB.png",
-    },
-    {
-      "mint": "So11111111111111111111111111111111111111112",
-      symbol: "SOL",
-      name: "Solana",
-      decimals: 9,
-      icon: "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/So11111111111111111111111111111111111111112/logo.png",
     },
     {
       "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
