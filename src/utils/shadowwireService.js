@@ -347,18 +347,15 @@ export const checkRecipientExists = async (address, connection) => {
 export const getSupportedTokens = () => {
   return [
     {
-      "mint": "4zMMC9srt5Ri5X14GAgXhaHii3GnPAEERYPJgZJDncDU",
-      "symbol": "USDC",
+      "mint": "CRKdGbTcFRdXqQimQbJiEjVKdMkPCE1ZXhXQYJMsbonk",
+      "symbol": "SOLF",
       "decimals": 6,
-      "fee_amount": 0,
-      "enabled": true
+      icon: "https://solanicafinance.pro/logo.webp",
     },
     {
       "mint": "oreoU2P8bN6jkk3jbaiVxYnG1dCXcYxwhwyK9jSybcp",
       "symbol": "ORE",
       "decimals": 11,
-      "fee_amount": 0,
-      "enabled": true
     },
     {
       "mint": "2fbBGNkpmPmPa3aTMqHV4czFUWshofxbAmrbyaVZmy7q",
@@ -378,55 +375,36 @@ export const getSupportedTokens = () => {
       "mint": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
       "symbol": "BONK",
       "decimals": 5,
-      "fee_amount": 0,
-      "enabled": true
-    },
-    {
-      "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
-      "symbol": "USDC",
-      "decimals": 6,
-      "fee_amount": 0,
-      "enabled": true
-    },
-    {
-      "mint": "11111111111111111111111111111111",
-      "symbol": "SOL",
-      "decimals": 9,
-      "fee_amount": 0,
-      "enabled": true
-    },
-    {
-      "mint": "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB",
-      "symbol": "USDT",
-      "decimals": 6,
-      "fee_amount": 0,
-      "enabled": true
+      icon: "https://wsrv.nl/?fit=cover&w=48&h=48&url=https://arweave.net/hQiPZOsRZXGXBJd_82PhVdlM_hACsT_q6wqwf5cSY7I",
     },
     {
       "mint": "WLFinEv6ypjkczcS83FZqFpgFZYwQXutRbxGe7oC16g",
       "symbol": "WLFI",
       "decimals": 6,
-      "fee_amount": 0,
-      "enabled": true
+      icon: "https://img-v1.raydium.io/icon/WLFinEv6ypjkczcS83FZqFpgFZYwQXutRbxGe7oC16g.png",
     },
     {
       "mint": "USD1ttGY1N17NEEHLmELoaybftRBUSErhqYiQzvEmuB",
       "symbol": "USD1",
-      "decimals": 6
+      "decimals": 6,
+      icon: "https://img-v1.raydium.io/icon/USD1ttGY1N17NEEHLmELoaybftRBUSErhqYiQzvEmuB.png",
     },
     {
+      "mint": "So11111111111111111111111111111111111111112",
       symbol: "SOL",
       name: "Solana",
       decimals: 9,
       icon: "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/So11111111111111111111111111111111111111112/logo.png",
     },
     {
+      "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
       symbol: "USDC",
       name: "USD Coin",
       decimals: 6,
       icon: "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v/logo.png",
     },
     {
+      "mint": "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB", 
       symbol: "USDT",
       name: "Tether USD",
       decimals: 6,
