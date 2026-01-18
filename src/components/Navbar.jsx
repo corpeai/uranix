@@ -56,7 +56,7 @@ const Navbar = () => {
               {/* Logo */}
               <Link to="/" className="flex items-center space-x-3">
                 <img src={logo} className="w-10 h-10" alt="Uranix Logo" />
-                <span className="text-xl font-bold text-white">Uranix</span>
+                <span className="text-xl font-bold text-white">Solanica Finance Private</span>
               </Link>
 
               {/* Menu Items */}
