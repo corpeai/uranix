@@ -347,6 +347,74 @@ export const checkRecipientExists = async (address, connection) => {
 export const getSupportedTokens = () => {
   return [
     {
+      "mint": "4zMMC9srt5Ri5X14GAgXhaHii3GnPAEERYPJgZJDncDU",
+      "symbol": "USDC",
+      "decimals": 6,
+      "fee_amount": 0,
+      "enabled": true
+    },
+    {
+      "mint": "oreoU2P8bN6jkk3jbaiVxYnG1dCXcYxwhwyK9jSybcp",
+      "symbol": "ORE",
+      "decimals": 11,
+      "fee_amount": 0,
+      "enabled": true
+    },
+    {
+      "mint": "2fbBGNkpmPmPa3aTMqHV4czFUWshofxbAmrbyaVZmy7q",
+      "symbol": "ZEC",
+      "decimals": 9,
+      "fee_amount": 0,
+      "enabled": true
+    },
+    {
+      "mint": "CzFvsLdUazabdiu9TYXujj4EY495fG7VgJJ3vQs6bonk",
+      "symbol": "RADR",
+      "decimals": 9,
+      "fee_amount": 0,
+      "enabled": true
+    },
+    {
+      "mint": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+      "symbol": "BONK",
+      "decimals": 5,
+      "fee_amount": 0,
+      "enabled": true
+    },
+    {
+      "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "symbol": "USDC",
+      "decimals": 6,
+      "fee_amount": 0,
+      "enabled": true
+    },
+    {
+      "mint": "11111111111111111111111111111111",
+      "symbol": "SOL",
+      "decimals": 9,
+      "fee_amount": 0,
+      "enabled": true
+    },
+    {
+      "mint": "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB",
+      "symbol": "USDT",
+      "decimals": 6,
+      "fee_amount": 0,
+      "enabled": true
+    },
+    {
+      "mint": "WLFinEv6ypjkczcS83FZqFpgFZYwQXutRbxGe7oC16g",
+      "symbol": "WLFI",
+      "decimals": 6,
+      "fee_amount": 0,
+      "enabled": true
+    },
+    {
+      "mint": "USD1ttGY1N17NEEHLmELoaybftRBUSErhqYiQzvEmuB",
+      "symbol": "USD1",
+      "decimals": 6
+    },
+    {
       symbol: "SOL",
       name: "Solana",
       decimals: 9,
