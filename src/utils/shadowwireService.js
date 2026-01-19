@@ -347,13 +347,13 @@ export const checkRecipientExists = async (address, connection) => {
 export const getSupportedTokens = () => {
   return [
     {
-      "mint": "CRKdGbTcFRdXqQimQbJiEjVKdMkPCE1ZXhXQYJMsbonk",
-      "symbol": "SOLF",
-      "decimals": 6,
+      mint: "CRKdGbTcFRdXqQimQbJiEjVKdMkPCE1ZXhXQYJMsbonk",
+      symbol: "SOLF",
+      decimals: 6,
       icon: "https://solanicafinance.pro/logo.webp",
     },
      {
-      "mint": "So11111111111111111111111111111111111111112",
+      mint: "So11111111111111111111111111111111111111112",
       symbol: "SOL",
       name: "Solana",
       decimals: 9,
