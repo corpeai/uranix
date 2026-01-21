@@ -347,63 +347,18 @@ export const checkRecipientExists = async (address, connection) => {
 export const getSupportedTokens = () => {
   return [
     {
-      mint: "CRKdGbTcFRdXqQimQbJiEjVKdMkPCE1ZXhXQYJMsbonk",
-      symbol: "SOLF",
-      decimals: 6,
-      icon: "https://solanicafinance.pro/logo.webp",
-    },
-     {
-      mint: "So11111111111111111111111111111111111111112",
       symbol: "SOL",
       name: "Solana",
       decimals: 9,
       icon: "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/So11111111111111111111111111111111111111112/logo.png",
-    }, 
-    {
-      "mint": "4k3Dyjzvzp8eMZWUXbBCjEvwSkkk59S5iCNLY3QrkX6R",
-      "symbol": "RAY",
-      "decimals": 6,
-      icon: "https://img-v1.raydium.io/icon/4k3Dyjzvzp8eMZWUXbBCjEvwSkkk59S5iCNLY3QrkX6R.png",
     },
     {
-      "mint": "2fbBGNkpmPmPa3aTMqHV4czFUWshofxbAmrbyaVZmy7q",
-      "symbol": "ZEC",
-      "decimals": 9,
-      icon: "https://img-v1.raydium.io/icon/A7bdiYdS5GjqGFtxf17ppRHtDKPkkRqbKtR27dxvQXaS.png",
-    },
-    {
-      "mint": "CzFvsLdUazabdiu9TYXujj4EY495fG7VgJJ3vQs6bonk",
-      "symbol": "RADR",
-      "decimals": 9,
-      icon: "https://www.radrlabs.io/icons/radricon.jpg",
-    },
-    {
-      "mint": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
-      "symbol": "BONK",
-      "decimals": 5,
-      icon: "https://wsrv.nl/?fit=cover&w=48&h=48&url=https://arweave.net/hQiPZOsRZXGXBJd_82PhVdlM_hACsT_q6wqwf5cSY7I",
-    },
-    {
-      "mint": "WLFinEv6ypjkczcS83FZqFpgFZYwQXutRbxGe7oC16g",
-      "symbol": "WLFI",
-      "decimals": 6,
-      icon: "https://img-v1.raydium.io/icon/WLFinEv6ypjkczcS83FZqFpgFZYwQXutRbxGe7oC16g.png",
-    },
-    {
-      "mint": "USD1ttGY1N17NEEHLmELoaybftRBUSErhqYiQzvEmuB",
-      "symbol": "USD1",
-      "decimals": 6,
-      icon: "https://img-v1.raydium.io/icon/USD1ttGY1N17NEEHLmELoaybftRBUSErhqYiQzvEmuB.png",
-    },
-    {
-      "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
       symbol: "USDC",
       name: "USD Coin",
       decimals: 6,
       icon: "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v/logo.png",
     },
     {
-      "mint": "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB", 
       symbol: "USDT",
       name: "Tether USD",
       decimals: 6,
