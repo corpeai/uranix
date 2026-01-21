@@ -1,15 +1,18 @@
-import React, { useMemo } from "react";
+'use client'
+
+import React, { useMemo } from 'react'
+import { ConnectionProvider, WalletProvider as SolanaWalletProvider } from '@solana/wallet-adapter-react'
+import { WalletModalProvider } from '@solana/wallet-adapter-react-ui'
 import {
-  ConnectionProvider,
-  WalletProvider as SolanaWalletProvider,
-} from "@solana/wallet-adapter-react";
-import { WalletModalProvider } from "@solana/wallet-adapter-react-ui";
-import { PhantomWalletAdapter } from "@solana/wallet-adapter-phantom";
-import { SolflareWalletAdapter } from "@solana/wallet-adapter-solflare";
-import { API_CONFIG } from "../utils/apiConfig";
+  PhantomWalletAdapter,
+  SolflareWalletAdapter,
+  TorusWalletAdapter,
+  LedgerWalletAdapter,
+} from '@solana/wallet-adapter-wallets'
 
 // Import wallet adapter CSS
-import "@solana/wallet-adapter-react-ui/styles.css";
+import '@solana/wallet-adapter-react-ui/styles.css'
+import { API_CONFIG } from "../utils/apiConfig";
 
 const WalletProvider = ({ children }) => {
   // Use Alchemy RPC endpoint from API_CONFIG
@@ -19,19 +22,26 @@ const WalletProvider = ({ children }) => {
       : API_CONFIG.alchemy.devnet;
   }, []);
 
-  // Configure wallet adapters
+
   const wallets = useMemo(
-    () => [new PhantomWalletAdapter(), new SolflareWalletAdapter()],
+    () => [
+      new PhantomWalletAdapter(),
+      new SolflareWalletAdapter(),
+      new TorusWalletAdapter(),
+      new LedgerWalletAdapter(),
+    ],
     []
-  );
+  )
 
   return (
     <ConnectionProvider endpoint={endpoint}>
       <SolanaWalletProvider wallets={wallets} autoConnect>
-        <WalletModalProvider>{children}</WalletModalProvider>
+        <WalletModalProvider>
+          {children}
+        </WalletModalProvider>
       </SolanaWalletProvider>
     </ConnectionProvider>
-  );
-};
+  )
+}
 
 export default WalletProvider;
