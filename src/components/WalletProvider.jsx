@@ -9,10 +9,11 @@ import {
   TorusWalletAdapter,
   LedgerWalletAdapter,
 } from '@solana/wallet-adapter-wallets'
+import { API_CONFIG } from '../utils/apiConfig'
+
 
 // Import wallet adapter CSS
 import '@solana/wallet-adapter-react-ui/styles.css'
-import { API_CONFIG } from "../utils/apiConfig";
 
 const WalletProvider = ({ children }) => {
   // Use Alchemy RPC endpoint from API_CONFIG
