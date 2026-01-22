@@ -2,8 +2,8 @@
 export const API_CONFIG = {
   // Alchemy Solana RPC
   alchemy: {
-    devnet: "https://solana-devnet.g.alchemy.com/v2/xhh60CwGA8HcI7QauuFz7",
-    mainnet: "https://solana-mainnet.g.alchemy.com/v2/xhh60CwGA8HcI7QauuFz7",
+    devnet: "https://solana-mainnet.g.alchemy.com/v2/SY3ke6fy9bHrPaIImrGNg",
+    mainnet: "https://solana-mainnet.g.alchemy.com/v2/SY3ke6fy9bHrPaIImrGNg",
   },
 
   // CoinGecko API
