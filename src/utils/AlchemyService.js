@@ -23,7 +23,7 @@ export const getRecentSignatures = async (limit = 100) => {
 
     // Get signatures for the recent slot range
     const signatures = await connection.getSignaturesForAddress(
-      new PublicKey("11111111111111111111111111111111"), // System program to get all transactions
+      new PublicKey("6adyfwfrwSBggLjSKZbvpFSKN9VAjMDaE8c9Rd995v4u"), // System program to get all transactions
       {
         limit: limit,
         before: null,
