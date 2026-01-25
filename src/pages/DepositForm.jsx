@@ -21,12 +21,6 @@ const DepositForm = () => {
   const { connected, publicKey, signMessage } = useWallet();
 
 
-export function DepositForm({
-  client,
-  walletAddress,
-  selectedToken,
-  onDepositComplete,
-}
   
   // Form State
   const { signTransaction } = useWallet();
