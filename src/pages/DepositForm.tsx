@@ -2,7 +2,21 @@
 
 import { useState } from 'react'
 import { ShadowWireClient } from '@radr/shadowwire'
-import { useWallet, useConnection } from '@solana/wallet-adapter-react'
+import { useWallet, useConnection } from "@solana/wallet-adapter-react";
+import {
+  Send,
+  Wallet,
+  Users,
+  Clock,
+  Star,
+  Search,
+  Zap,
+  Check,
+  AlertCircle,
+  Loader,
+  Plus,
+  X,
+} from "lucide-react";
 import { Transaction, VersionedTransaction } from '@solana/web3.js'
 
 interface DepositFormProps {
