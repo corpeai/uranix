@@ -19,6 +19,9 @@ import {
 } from "lucide-react";
 import { Transaction, VersionedTransaction } from '@solana/web3.js'
 
+const DepositForm = () => {
+  const { connected, publicKey, signMessage } = useWallet();
+
 interface DepositFormProps {
   client: ShadowWireClient
   walletAddress: string
