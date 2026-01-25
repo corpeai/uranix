@@ -4,6 +4,7 @@ import WalletProvider from "./components/WalletProvider";
 import Layout from "./Layout";
 import Home from "./pages/Home";
 import Dashboard from "./pages/Dashboard";
+import DepositForm from "./pages/DepositForm";
 import Transfer from "./pages/Transfer";
 import PaymentScreen from "./pages/Payment";
 import PayAnyone from "./pages/PayAnyone";
@@ -23,6 +24,7 @@ function App() {
         <Layout>
           <Routes>
             <Route path="/" element={<Dashboard />} />
+            <Route path="/depositform" element={<DepositForm />} />
             <Route path="/receive-payment" element={<PaymentScreen />} />
             <Route path="/transfer" element={<Transfer />} />
             <Route path="/make-payment" element={<PayAnyone />} />
