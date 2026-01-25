@@ -26,13 +26,24 @@ export function DepositForm({
   walletAddress,
   selectedToken,
   onDepositComplete,
-}: DepositFormProps) {
+}
+  
+  // Form State
   const { signTransaction } = useWallet()
   const { connection } = useConnection()
   const [amount, setAmount] = useState('')
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [success, setSuccess] = useState<string | null>(null)
+
+   // ShadowWire state
+  const [depositAmount, setDepositAmount] = useState("");
+  const [withdrawAmount, setWithdrawAmount] = useState("");
+  const [shadowMode, setShadowMode] = useState("deposit"); // 'deposit' or 'withdraw'
+  const [shadowLoading, setShadowLoading] = useState(false);
+  const [shadowError, setShadowError] = useState("");
+  const [shadowSuccess, setShadowSuccess] = useState("");
+  const [isRecipient, setIsRecipient] = useState(false); 
 
   const getDecimals = (token: string): number => {
     const decimals: Record<string, number> = {
