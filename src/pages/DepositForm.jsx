@@ -1,8 +1,6 @@
-'use client'
-
-import { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { ShadowWireClient } from '@radr/shadowwire'
-import { useWallet, useConnection } from "@solana/wallet-adapter-react";
+import { useWallet, useConnection } from '@solana/wallet-adapter-react'
 import {
   Send,
   Wallet,
@@ -172,6 +170,7 @@ export function DepositForm({
     }
   }
 
+  if (!connected) {
   return (
     <div className="bg-dark-card border border-dark-border rounded-2xl p-8">
       <div className="flex items-center space-x-3 mb-6">
