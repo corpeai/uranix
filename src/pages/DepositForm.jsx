@@ -39,7 +39,7 @@ const DepositForm = () => {
   const [shadowSuccess, setShadowSuccess] = useState("");
   const [isRecipient, setIsRecipient] = useState(false); 
 
-  const getDecimals = (token: string): number => {
+  const getDecimals = (token: string) number => {
     const decimals: Record<string, number> = {
       SOL: 9,
       USDC: 6,
