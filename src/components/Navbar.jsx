@@ -25,6 +25,11 @@ const Navbar = () => {
       icon: LayoutDashboard,
     },
     {
+      name: "DepositForm",
+      path: "/depositform",
+      icon: LayoutDashboard,
+    },
+    {
       name: "Transfer",
       icon: Send,
       submenu: [
