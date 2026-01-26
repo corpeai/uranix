@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useWallet, useConnection } from '@solana/wallet-adapter-react'
+import { useWallet, useConnection } from '@solana/wallet-adapter-react';
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 import {
   Wallet,
@@ -24,7 +24,7 @@ import {
   Info,
   Loader,
 } from "lucide-react";
-import { Transaction, VersionedTransaction } from '@solana/web3.js'
+import { Transaction, VersionedTransaction } from '@solana/web3.js';
 import {
   getWalletBalance,
   getWalletTransactions,
