@@ -39,7 +39,7 @@ import {
   depositToShadowWire,
   withdrawFromShadowWire,
   registerAsRecipient,
-} from "../utils/shadowwireService";
+} from "../utils/shadowwire";
 import { API_CONFIG } from "../utils/apiConfig";
 
 const WalletManagement = () => {
