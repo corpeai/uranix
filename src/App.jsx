@@ -4,7 +4,6 @@ import WalletProvider from "./components/WalletProvider";
 import Layout from "./Layout";
 import Home from "./pages/Home";
 import Dashboard from "./pages/Dashboard";
-import DepositForm from "./pages/DepositForm";
 import Transfer from "./pages/Transfer";
 import PaymentScreen from "./pages/Payment";
 import PayAnyone from "./pages/PayAnyone";
