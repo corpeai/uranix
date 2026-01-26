@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useWallet, useConnection } from "@solana/wallet-adapter-react";
+import { useWallet, useConnection } from '@solana/wallet-adapter-react'
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 import {
   Wallet,
@@ -24,7 +24,7 @@ import {
   Info,
   Loader,
 } from "lucide-react";
-import { LAMPORTS_PER_SOL } from "@solana/web3.js";
+import { Transaction, VersionedTransaction } from '@solana/web3.js'
 import {
   getWalletBalance,
   getWalletTransactions,
@@ -33,17 +33,17 @@ import {
   formatAddress,
   formatTimestamp,
   getTransactionType,
-} from "../lib/solanaService";
+} from "../utils/solanaService";
 import {
   getShadowWireBalance,
   depositToShadowWire,
   withdrawFromShadowWire,
   registerAsRecipient,
-} from "../utils/shadowwire";
+} from "../lib/shadowwire";
 import { API_CONFIG } from "../utils/apiConfig";
 
 const WalletManagement = () => {
-  const { connected, publicKey, disconnect, wallet } = useWallet();
+  const { signMessage, publicKey } = useWallet();
   const { connection } = useConnection();
 
   // State
