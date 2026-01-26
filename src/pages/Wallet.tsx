@@ -33,7 +33,7 @@ import {
   formatAddress,
   formatTimestamp,
   getTransactionType,
-} from "../utils/solanaService";
+} from "../lib/solanaService";
 import {
   getShadowWireBalance,
   depositToShadowWire,
