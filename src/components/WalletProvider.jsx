@@ -1,17 +1,23 @@
-import React, { useMemo } from "react";
+'use client';
+
+import { FC, ReactNode, useMemo, useCallback } from 'react';
+import { ConnectionProvider, WalletProvider as SolanaWalletProvider } from '@solana/wallet-adapter-react';
+import { WalletAdapterNetwork, WalletError } from '@solana/wallet-adapter-base';
+import { WalletModalProvider } from '@solana/wallet-adapter-react-ui';
 import {
-  ConnectionProvider,
-  WalletProvider as SolanaWalletProvider,
-} from "@solana/wallet-adapter-react";
-import { WalletModalProvider } from "@solana/wallet-adapter-react-ui";
-import { PhantomWalletAdapter } from "@solana/wallet-adapter-phantom";
-import { SolflareWalletAdapter } from "@solana/wallet-adapter-solflare";
+  PhantomWalletAdapter,
+  SolflareWalletAdapter,
+} from '@solana/wallet-adapter-wallets';
+import { clusterApiUrl } from '@solana/web3.js';
 import { API_CONFIG } from "../utils/apiConfig";
 
 // Import wallet adapter CSS
 import "@solana/wallet-adapter-react-ui/styles.css";
 
 const WalletProvider = ({ children }) => {
+ // Determine network from environment
+const network = (process.env.NEXT_PUBLIC_SOLANA_NETWORK as WalletAdapterNetwork) || WalletAdapterNetwork.Devnet; 
+  
   // Use Alchemy RPC endpoint from API_CONFIG
   const endpoint = useMemo(() => {
     return API_CONFIG.network === "mainnet"
