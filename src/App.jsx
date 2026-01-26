@@ -23,7 +23,6 @@ function App() {
         <Layout>
           <Routes>
             <Route path="/" element={<Dashboard />} />
-            <Route path="/depositform" element={<DepositForm />} />
             <Route path="/receive-payment" element={<PaymentScreen />} />
             <Route path="/transfer" element={<Transfer />} />
             <Route path="/make-payment" element={<PayAnyone />} />
