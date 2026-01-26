@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useWallet, useConnection } from "@solana/wallet-adapter-react";
+import { useWallet} from "@solana/wallet-adapter-react";
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 import {
   Wallet,
@@ -43,8 +43,8 @@ import {
 import { API_CONFIG } from "../utils/apiConfig";
 
 const WalletManagement = () => {
-  const { connected, publicKey, disconnect, wallet } = useWallet();
-  const { connection } = useConnection();
+const { signMessage, publicKey } = useWallet();
+
 
   // State
   const [loading, setLoading] = useState(false);
