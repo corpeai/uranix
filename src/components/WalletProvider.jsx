@@ -14,10 +14,7 @@ import { API_CONFIG } from "../utils/apiConfig";
 // Import wallet adapter CSS
 import "@solana/wallet-adapter-react-ui/styles.css";
 
-export const WalletProvider: FC<WalletProviderProps> = ({ children }) => {
-  // Determine network from environment
-  const network = (process.env.NEXT_PUBLIC_SOLANA_NETWORK as WalletAdapterNetwork) || WalletAdapterNetwork.Devnet;
-
+export const WalletProvider = ({ children }) => { 
   
   // Use Alchemy RPC endpoint from API_CONFIG
   const endpoint = useMemo(() => {
