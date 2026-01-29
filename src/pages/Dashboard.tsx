@@ -7,6 +7,8 @@ import {
   formatChange,
 } from "../utils/coingeckoService";
 import { getWalletBalance } from "../utils/solanaService";
+import { PrivateBalance } from '@/components/privacy/PrivateBalance';
+import { PrivacyScore } from '@/components/privacy/PrivacyScore';
 import TrendingTokens from "../components/TrendingTokens";
 import LargeTransactions from "../components/LargeTransactions";
 import WalletTracker from "../components/WalletTracker";
