@@ -427,3 +427,4 @@ export default function LearnPage() {
     </div>
   );
 }
+export default Learn;
