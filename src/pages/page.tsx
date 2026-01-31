@@ -1,7 +1,7 @@
 'use client';
 
-import { Header } from '@/components/layout/Header';
-import { Footer } from '@/components/layout/Footer';
+import { Navbar } from '../components/Navbar';
+import { Footer } from '../components/Footer';
 import { useState } from 'react';
 
 export default function LearnPage() {
