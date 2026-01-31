@@ -1,34 +1,11 @@
-# Shieldlane Privacy Integration - Implementation Complete
+# Solanica Finance Privacy Integration - Implementation Complete
 
 ## Summary
 
-Full Privacy Cash and ShadowWire SDK integrations are now complete and deployed to Vercel at:
-**https://shieldlane.vercel.app**
+Full ShadowWire SDK integrations are now complete and deployed to Vercel:
 
 ## What Was Implemented
 
-### 1. Privacy Cash SDK Integration (ZK-SNARKs)
-
-**Browser-Compatible Encryption Service** (`src/lib/privacy-cash-browser/encryption.ts`)
-- Uses Web Crypto API for browser environments
-- Implements AES-256-GCM (V2) and AES-128-CTR (V1) encryption
-- Keccak256-based key derivation from wallet signatures
-- UTXO commitment and nullifier generation
-- Full support for encrypted private transactions
-
-**localStorage Adapter** (`src/lib/privacy-cash-browser/storage.ts`)
-- Encrypted UTXO caching in browser localStorage
-- Tracks spent/unspent UTXOs
-- Supports multiple wallets
-- Storage size monitoring
-
-**Privacy Cash Browser Client** (`src/lib/privacy-cash-browser/index.ts`)
-- Full integration with Light Protocol SDK (`@lightprotocol/stateless.js`)
-- Deposit (shield) SOL into privacy pools
-- Withdraw (unshield) SOL with ZK-proofs
-- Private balance tracking
-- UTXO management
-- Merkle tree integration
 
 ### 2. ShadowWire/ShadowPay Integration (Bulletproofs)
 
@@ -63,37 +40,17 @@ Add these to your Vercel deployment:
 
 ### Required
 ```
-NEXT_PUBLIC_SOLANA_NETWORK=devnet
+VITE_PUBLIC_SOLANA_NETWORK=devnet
 ```
 
 ### Optional (Recommended)
 ```
-NEXT_PUBLIC_HELIUS_API_KEY=your_helius_api_key
-NEXT_PUBLIC_PRIVACY_CASH_PROGRAM_ID=9fhQBbumKEFuXtMBDw8AaQyAjCorLGJQiS3skWZdQyQD
-NEXT_PUBLIC_SHADOWPAY_API_BASE=https://shadow.radr.fun/shadowpay
+VITE_PUBLIC_HELIUS_API_KEY=your_helius_api_key
+VITE_PUBLIC_PRIVACY_CASH_PROGRAM_ID=9fhQBbumKEFuXtMBDw8AaQyAjCorLGJQiS3skWZdQyQD
+VITE_PUBLIC_SHADOWPAY_API_BASE=https://shadow.radr.fun/shadowpay
 ```
 
 ## How It Works
-
-### Privacy Cash Flow (ZK-SNARKs):
-
-1. **Deposit/Shield**:
-   - User deposits SOL to Privacy Cash pool
-   - Generates commitment using Pedersen hash
-   - Stores encrypted UTXO in localStorage
-   - Commitment added to Merkle tree
-
-2. **Withdraw/Unshield**:
-   - User requests withdrawal
-   - Generates ZK-proof of UTXO ownership
-   - Proof verified on-chain without revealing deposit
-   - Funds sent to recipient
-   - UTXO marked as spent
-
-3. **Private Balance**:
-   - Decrypts stored UTXOs using wallet signature
-   - Sums unspent UTXOs
-   - Balance visible only to wallet owner
 
 ### ShadowWire Flow (Bulletproofs):
 
@@ -105,7 +62,6 @@ NEXT_PUBLIC_SHADOWPAY_API_BASE=https://shadow.radr.fun/shadowpay
 
 2. **Privacy Modes**:
    - **Stealth**: Maximum privacy, one-time addresses
-   - **Mixed**: Balanced privacy/cost
    - **Public**: Minimal privacy, lowest cost
 
 ## Dependencies Added
@@ -130,13 +86,12 @@ NEXT_PUBLIC_SHADOWPAY_API_BASE=https://shadow.radr.fun/shadowpay
    - Privacy pool provides anonymity set
 
 3. **Multiple Privacy Layers**:
-   - Privacy Cash: ZK-SNARK based shielding
+   - Privacy Cash: Coming Soon
    - ShadowWire: Bulletproof + stealth addresses
    - Users can choose method based on needs
 
 ## Testing Checklist
 
-- [x] Privacy Cash SDK integration
 - [x] ShadowWire SDK integration
 - [x] Unified privacy service
 - [x] Privacy Score UI improvements
@@ -152,63 +107,21 @@ NEXT_PUBLIC_SHADOWPAY_API_BASE=https://shadow.radr.fun/shadowpay
 
 1. **Add Helius API Key to Vercel**:
    - Go to Vercel dashboard → Settings → Environment Variables
-   - Add `NEXT_PUBLIC_HELIUS_API_KEY=your_key`
+   - Add `VITE_PUBLIC_HELIUS_API_KEY=your_key`
    - Redeploy
 
 2. **Test on Devnet**:
-   - Connect wallet to https://shieldlane.vercel.app
    - Request devnet SOL from faucet
-   - Test Privacy Cash deposit
    - Test ShadowWire stealth transfer
    - Verify privacy scores update
 
-3. **Production Considerations**:
+3. **Production Considerations (coming Soon)**:
    - Switch to mainnet-beta
    - Use production Helius endpoint
    - Audit smart contract integrations
    - Add transaction confirmation UI
    - Implement error recovery flows
 
-## Technical Architecture
-
-```
-┌─────────────────────────────────────────┐
-│         Shieldlane Frontend             │
-│      (Next.js + React + Tailwind)       │
-└─────────────────────────────────────────┘
-                   │
-      ┌────────────┴────────────┐
-      │                          │
-┌─────▼─────────┐      ┌────────▼────────┐
-│ Privacy Cash  │      │   ShadowWire    │
-│  (ZK-SNARKs)  │      │ (Bulletproofs)  │
-└─────┬─────────┘      └────────┬────────┘
-      │                          │
-┌─────▼─────────┐      ┌────────▼────────┐
-│ Light Protocol│      │  ShadowPay API  │
-│  Solana SDK   │      │  (Radr.fun)     │
-└─────┬─────────┘      └────────┬────────┘
-      │                          │
-      └────────────┬─────────────┘
-                   │
-         ┌─────────▼──────────┐
-         │   Solana Blockchain │
-         │   (via Helius RPC)  │
-         └────────────────────┘
-```
-
-## Files Created/Modified
-
-### New Files:
-- `src/lib/privacy-cash-browser/encryption.ts` (220 lines)
-- `src/lib/privacy-cash-browser/storage.ts` (120 lines)
-- `src/lib/privacy-cash-browser/index.ts` (270 lines)
-- `src/lib/unified-privacy-service.ts` (240 lines)
-
-### Modified Files:
-- `src/lib/privacy-cash.ts` - Updated to use browser implementation
-- `src/components/privacy/PrivacyScore.tsx` - Added expand/collapse
-- `package.json` - Added Privacy Cash dependencies
 
 ## Performance Considerations
 
@@ -226,7 +139,6 @@ NEXT_PUBLIC_SHADOWPAY_API_BASE=https://shadow.radr.fun/shadowpay
 
 ## Support & Documentation
 
-- **Privacy Cash**: https://github.com/Privacy-Cash/privacy-cash-sdk
 - **Light Protocol**: https://docs.lightprotocol.com
 - **ShadowWire**: https://registry.scalar.com/@radr/apis/shadowpay-api
 - **Helius**: https://docs.helius.dev
@@ -234,5 +146,4 @@ NEXT_PUBLIC_SHADOWPAY_API_BASE=https://shadow.radr.fun/shadowpay
 ---
 
 **Status**: ✅ Complete and Deployed
-**Deployment**: https://shieldlane.vercel.app
-**Last Updated**: 2026-01-16
+
