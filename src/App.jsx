@@ -7,6 +7,7 @@ import Dashboard from "./pages/Dashboard";
 import Transfer from "./pages/Transfer";
 import PaymentScreen from "./pages/Payment";
 import PayAnyone from "./pages/PayAnyone";
+import Learn from "./pages/Learn";
 import WalletManagement from "./pages/Wallet";
 
 const Receive = () => (
@@ -28,6 +29,7 @@ function App() {
             <Route path="/make-payment" element={<PayAnyone />} />
             <Route path="/wallet-management" element={<WalletManagement />} />
             <Route path="/receive" element={<Receive />} />
+            <Route path="/learn" element={<Learn />} />
           </Routes>
         </Layout>
       </WalletProvider>
