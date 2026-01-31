@@ -15,7 +15,7 @@ import {
   ExternalLink,
 } from "lucide-react";
 
-export default function Learn() {
+const Learn() {
   const [activeSection, setActiveSection] = useState('basics');
 
   const sections = [
@@ -438,3 +438,4 @@ export default function Learn() {
     </div>
   );
 }
+export default Learn;
