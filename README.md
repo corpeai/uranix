@@ -219,4 +219,4 @@ MIT License - Open Source
 
 **Built by Solanica Finance with ❤️ for Privacy Hack 2026**
 
-*Your transactions. Your business. Your Shieldlane.* 🛡️
+*Kepp Your transactions Your business SF PRVT.* 
