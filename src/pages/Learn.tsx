@@ -1,8 +1,19 @@
-'use client';
-
-import { Navbar } from '../components/Navbar';
-import { Footer } from '../components/Footer';
-import { useState } from 'react';
+import React, { useState, useEffect } from "react";
+import { useWallet, useConnection } from "@solana/wallet-adapter-react";
+import {
+  Send,
+  Wallet,
+  Shield,
+  Eye,
+  EyeOff,
+  ArrowRight,
+  Check,
+  AlertCircle,
+  Loader,
+  History,
+  Copy,
+  ExternalLink,
+} from "lucide-react";
 
 export default function Learn() {
   const [activeSection, setActiveSection] = useState('basics');
