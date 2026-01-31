@@ -4,7 +4,7 @@ import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
 import { useState } from 'react';
 
-export default function LearnPage() {
+export default function Learn() {
   const [activeSection, setActiveSection] = useState('basics');
 
   const sections = [
@@ -427,4 +427,3 @@ export default function LearnPage() {
     </div>
   );
 }
-export default Learn;
