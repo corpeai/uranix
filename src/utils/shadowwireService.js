@@ -352,6 +352,18 @@ export const getSupportedTokens = () => {
       decimals: 9,
       icon: "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/So11111111111111111111111111111111111111112/logo.png",
     },
+      {
+      symbol: "RADR",
+      name: "RADR Coin",
+      decimals: 9,
+      icon: "https://www.radrlabs.io/icons/radricon.jpg",
+    },
+    {
+      symbol: "WLFI",
+      name: "WLFI",
+      decimals: 6,
+      icon: "https://www.radrlabs.io/icons/wlfi.png",
+    },
     {
       symbol: "USDC",
       name: "USD Coin",
