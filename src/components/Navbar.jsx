@@ -56,7 +56,7 @@ const Navbar = () => {
               {/* Logo */}
               <Link to="/" className="flex items-center space-x-3">
                 <img src={logo} className="w-10 h-10" alt="Uranix Logo" />
-                <span className="text-xl font-bold text-white">Uranix</span>
+                <span className="text-xl font-bold text-white">Solanica Finance</span>
               </Link>
 
               {/* Menu Items */}
@@ -123,7 +123,7 @@ const Navbar = () => {
               {/* Logo */}
               <Link to="/" className="flex items-center space-x-2">
                 <img src={logo} className="w-9 h-9" alt="Uranix Logo" />
-                <span className="text-lg font-bold text-white">Uranix</span>
+                <span className="text-lg font-bold text-white">Solanica Finance</span>
               </Link>
 
               {/* Menu Button */}
@@ -234,7 +234,7 @@ const Navbar = () => {
               {/* Footer */}
               <div className="p-4 border-t border-white/10">
                 <p className="text-xs text-gray-500 text-center">
-                  Uranix v1.0 • Powered by Solana
+                  Solanica Finance v1.0 • Powered by Solana
                 </p>
               </div>
             </div>
