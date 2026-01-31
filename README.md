@@ -1,12 +1,12 @@
-# 🛡️ Shieldlane
+# 🛡️ Solanica Finance PRVT
 
-**Your transactions. Your business. Your Shieldlane.**
+**Your transactions. Your business..**
 
-A privacy-preserving wallet wrapper for high-value Solana users (whales, DAOs, traders) built for the **Privacy Hack 2026** hackathon.
+A privacy-preserving wallet wrapper for high-value Solana users (whales,big transactions,wallet tracking, DAOs, traders) built for the **Privacy Hack 2026** hackathon.
 
 ## 🎯 Overview
 
-Shieldlane is a comprehensive privacy solution that shields transaction history and balances for Solana users who need protection from surveillance, front-running, and MEV extraction. Built with cutting-edge cryptographic primitives including ZK-SNARKs and Bulletproofs.
+SF PRVT enables private transfers on Solana by hiding transaction amounts using Bulletproofs while maintaining on-chain verifiability. The protocol supports 22 tokens.
 
 ### Key Features
 
@@ -20,15 +20,27 @@ Shieldlane is a comprehensive privacy solution that shields transaction history 
 
 This project is optimized for the following bounties:
 
-1. **Privacy Cash SDK** ($6k Best Overall) - Whale wallet privacy use case
-2. **Radr Labs / ShadowWire** ($10k Grand Prize) - Bulletproofs for hiding amounts
-3. **Track 01: Private Payments** ($15k) - Main hackathon track
-4. **Helius RPC** ($5k) - RPC infrastructure integration
-5. **Encrypt.trade** ($500) - Educational component about wallet surveillance
+1. **Radr Labs / ShadowWire** ($10k Grand Prize) - Bulletproofs for hiding amounts
+2. **Track 01: Private Payments** ($15k) - Main hackathon track
+3. **Helius RPC** ($5k) - RPC infrastructure integration
+4. **Encrypt.trade** ($500) - Educational component about wallet surveillance
 
-**Total Potential: $36,500+**
+**Total Potential: $30,500+**
 
 ## 🚀 Quick Start
+import { ShadowWireClient } from '@radr/shadowwire';
+
+const client = new ShadowWireClient();
+
+const balance = await client.getBalance('YOUR_WALLET');
+
+await client.transfer({
+  sender: 'YOUR_WALLET',
+  recipient: 'RECIPIENT_WALLET',
+  amount: 0.5,
+  token: 'SOL',
+  type: 'internal'
+});
 
 ### Prerequisites
 
@@ -37,10 +49,7 @@ This project is optimized for the following bounties:
 - Solana wallet (Phantom, Solflare, or Backpack)
 
 ### Installation
-
-```bash
-# 1. Check Node version (must be 20.9.0+)
-node --version
+npm install @radr/shadowwire
 
 # If below 20.9.0, upgrade Node:
 # - Using Homebrew: brew upgrade node
@@ -48,18 +57,18 @@ node --version
 # - Or activate conda: conda activate base (if using conda/miniconda)
 
 # 2. Clone the repository
-git clone https://github.com/emlanis/shieldlane.git
-cd shieldlane/app
+git clone https://github.com/solanicafinance/solanicafinanceprvt.git
+
 
 # 3. Install dependencies
-yarn install
+npm install
 
 # 4. Set up environment variables
 cp .env.local.example .env.local
 # Edit .env.local and add your Helius API key (get free at https://www.helius.dev/)
 
 # 5. Run development server
-yarn dev
+npm dev
 ```
 
 Visit `http://localhost:3000` to see the application.
@@ -70,7 +79,6 @@ Visit `http://localhost:3000` to see the application.
 - Your system is using an older Node version
 - Check with: `which node` and `node --version`
 - Solution: Upgrade Node or use a version manager (nvm/conda)
-- See [NEXT_STEPS.md](docs/NEXT_STEPS.md) for detailed instructions
 
 ### Environment Variables
 
@@ -78,8 +86,8 @@ Create a `.env.local` file in the `app/` directory:
 
 ```env
 # Helius RPC Configuration
-NEXT_PUBLIC_HELIUS_API_KEY=your_helius_api_key_here
-NEXT_PUBLIC_SOLANA_NETWORK=devnet
+VITE_PUBLIC_HELIUS_API_KEY=your_helius_api_key_here
+VITE_PUBLIC_SOLANA_NETWORK=devnet
 
 # ShadowPay API Configuration
 NEXT_PUBLIC_SHADOWPAY_API_BASE=https://shadow.radr.fun/shadowpay
@@ -92,11 +100,10 @@ NEXT_PUBLIC_PRIVACY_CASH_PROGRAM_ID=9fhQBbumKEFuXtMBDw8AaQyAjCorLGJQiS3skWZdQyQD
 
 ### Technology Stack
 
-- **Frontend**: Next.js 16, React 19, TypeScript, Tailwind CSS
+- **Frontend**: Vite, TypeScript, Tailwind CSS
 - **Blockchain**: Solana (Devnet)
 - **Wallet Integration**: Solana Wallet Adapter
 - **Privacy Protocols**:
-  - Privacy Cash SDK (ZK-SNARKs)
   - ShadowWire/ShadowPay (Bulletproofs, ElGamal encryption)
 - **RPC**: Helius
 - **State Management**: Zustand
@@ -105,8 +112,8 @@ NEXT_PUBLIC_PRIVACY_CASH_PROGRAM_ID=9fhQBbumKEFuXtMBDw8AaQyAjCorLGJQiS3skWZdQyQD
 ### Project Structure
 
 ```
-shieldlane/
-├── app/                          # Next.js application
+sf prvt/
+├── app/                          # vite application
 │   ├── src/
 │   │   ├── app/                  # App router pages
 │   │   │   ├── page.tsx          # Landing page
@@ -148,19 +155,11 @@ Shows two views:
 
 Analyzes:
 - Exposed vs Protected transactions
-- Privacy Score (0-100)
 - Tracking capabilities
 - Actionable recommendations
 
 ## 🧪 How It Works
 
-### Privacy Cash Integration
-
-**Program ID**: `9fhQBbumKEFuXtMBDw8AaQyAjCorLGJQiS3skWZdQyQD`
-
-- **Deposit**: Generate commitment in Merkle tree
-- **Withdraw**: Prove ownership with ZK-SNARK without revealing which deposit
-- Breaks link between deposits and withdrawals
 
 ### ShadowWire Integration
 
@@ -188,7 +187,6 @@ The `/learn` page covers:
 
 ## 🔗 Links
 
-- **Privacy Cash SDK**: https://github.com/Privacy-Cash/privacy-cash-sdk
 - **ShadowWire API**: https://registry.scalar.com/@radr/apis/shadowpay-api
 - **Helius RPC**: https://www.helius.dev/
 - **Solana Explorer**: https://explorer.solana.com/?cluster=devnet
@@ -198,7 +196,6 @@ The `/learn` page covers:
 - [x] All code is open source
 - [x] Deployed to Solana devnet
 - [x] Documentation complete
-- [x] Privacy Cash integration
 - [x] ShadowWire integration
 - [x] Helius RPC configuration
 - [x] Educational content
@@ -219,13 +216,12 @@ MIT License - Open Source
 
 ## 🙏 Acknowledgments
 
-- Privacy Cash team for ZK-SNARK technology
 - Radr Labs for ShadowWire/ShadowPay
 - Helius for RPC infrastructure
 - Privacy Hack 2026 organizers
 
 ---
 
-**Built by emlanis with ❤️ for Privacy Hack 2026**
+**Built by Solanica Finance with ❤️ for Privacy Hack 2026**
 
 *Your transactions. Your business. Your Shieldlane.* 🛡️
