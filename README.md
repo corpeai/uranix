@@ -28,12 +28,12 @@ This project is optimized for the following bounties:
 **Total Potential: $30,500+**
 
 ## 🚀 Quick Start
+
+```
 import { ShadowWireClient } from '@radr/shadowwire';
 
 const client = new ShadowWireClient();
-
 const balance = await client.getBalance('YOUR_WALLET');
-
 await client.transfer({
   sender: 'YOUR_WALLET',
   recipient: 'RECIPIENT_WALLET',
@@ -41,34 +41,32 @@ await client.transfer({
   token: 'SOL',
   type: 'internal'
 });
-
+```
 ### Prerequisites
 
-- **Node.js 20.9.0 or higher** (Next.js 16 requirement)
-- Yarn package manager
+- Npm package manager
 - Solana wallet (Phantom, Solflare, or Backpack)
 
 ### Installation
+
+```
 npm install @radr/shadowwire
 
-# If below 20.9.0, upgrade Node:
-# - Using Homebrew: brew upgrade node
-# - Using nvm: nvm install 20 && nvm use 20
-# - Or activate conda: conda activate base (if using conda/miniconda)
-
 # 2. Clone the repository
-git clone https://github.com/solanicafinance/solanicafinanceprvt.git
 
+git clone https://github.com/solanicafinance/solanicafinanceprvt.git
 
 # 3. Install dependencies
 npm install
-
 # 4. Set up environment variables
 cp .env.local.example .env.local
 # Edit .env.local and add your Helius API key (get free at https://www.helius.dev/)
+```
 
 # 5. Run development server
-npm dev
+
+```
+Run npm dev
 ```
 
 Visit `http://localhost:3000` to see the application.
@@ -82,18 +80,15 @@ Visit `http://localhost:3000` to see the application.
 
 ### Environment Variables
 
-Create a `.env.local` file in the `app/` directory:
-
-```env
+```
+Create a .env.local` file in the `app/` directory:
+```
 # Helius RPC Configuration
+
+```
 VITE_PUBLIC_HELIUS_API_KEY=your_helius_api_key_here
 VITE_PUBLIC_SOLANA_NETWORK=devnet
 
-# ShadowPay API Configuration
-NEXT_PUBLIC_SHADOWPAY_API_BASE=https://shadow.radr.fun/shadowpay
-
-# Privacy Cash Configuration
-NEXT_PUBLIC_PRIVACY_CASH_PROGRAM_ID=9fhQBbumKEFuXtMBDw8AaQyAjCorLGJQiS3skWZdQyQD
 ```
 
 ## 🏗️ Architecture
@@ -104,7 +99,7 @@ NEXT_PUBLIC_PRIVACY_CASH_PROGRAM_ID=9fhQBbumKEFuXtMBDw8AaQyAjCorLGJQiS3skWZdQyQD
 - **Blockchain**: Solana (Devnet)
 - **Wallet Integration**: Solana Wallet Adapter
 - **Privacy Protocols**:
-  - ShadowWire/ShadowPay (Bulletproofs, ElGamal encryption)
+- ShadowWire/ShadowPay (Bulletproofs, ElGamal encryption)
 - **RPC**: Helius
 - **State Management**: Zustand
 - **UI Components**: Custom components with dark theme
