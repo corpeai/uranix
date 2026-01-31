@@ -35,6 +35,7 @@ const Navbar = () => {
           icon: ArrowDownToLine,
         },
         { name: "Make Payment", path: "/make-payment", icon: Wallet },
+        { name: "Learn", path: "/learn", icon: Book },
       ],
     },
     {
