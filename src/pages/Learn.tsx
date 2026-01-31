@@ -15,7 +15,9 @@ import {
   ExternalLink,
 } from "lucide-react";
 
-const Learn() {
+const Learn = () => {
+  const { connected, publicKey, signMessage } = useWallet();
+  
   const [activeSection, setActiveSection] = useState('basics');
 
   const sections = [
