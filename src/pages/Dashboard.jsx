@@ -10,6 +10,7 @@ import { getWalletBalance } from "../utils/solanaService";
 import TrendingTokens from "../components/TrendingTokens";
 import LargeTransactions from "../components/LargeTransactions";
 import WalletTracker from "../components/WalletTracker";
+import Learn from "../pages/Learn";
 
 const Dashboard = () => {
   const { connected, publicKey } = useWallet();
