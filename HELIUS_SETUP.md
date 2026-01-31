@@ -29,7 +29,7 @@ Helius provides enterprise-grade Solana RPC infrastructure with:
 
 ### 3. Add to Vercel (Secure Method)
 
-⚠️ **IMPORTANT**: Don't use `NEXT_PUBLIC_HELIUS_API_KEY` - it exposes your key in the browser!
+⚠️ **IMPORTANT**: Don't use `VITE_PUBLIC_HELIUS_API_KEY` - it exposes your key in the browser!
 
 **Option A: Via Vercel Dashboard (Recommended)**
 
@@ -39,7 +39,7 @@ Helius provides enterprise-grade Solana RPC infrastructure with:
 4. Click **Add New**
 5. Add variable with **full RPC URL**:
    ```
-   Name:  NEXT_PUBLIC_SOLANA_RPC_URL
+   Name:  VITE_PUBLIC_SOLANA_RPC_URL
    Value: https://devnet.helius-rpc.com/?api-key=your-helius-api-key-here
    ```
    - For **devnet**: `https://devnet.helius-rpc.com/?api-key=YOUR_KEY`
@@ -47,7 +47,7 @@ Helius provides enterprise-grade Solana RPC infrastructure with:
 
 6. Also add network variable:
    ```
-   Name:  NEXT_PUBLIC_SOLANA_NETWORK
+   Name:  VITE_PUBLIC_SOLANA_NETWORK
    Value: devnet
    ```
 7. Select environments: Production, Preview, Development
@@ -62,7 +62,7 @@ Helius provides enterprise-grade Solana RPC infrastructure with:
 npm i -g vercel
 
 # Add RPC URL environment variable
-vercel env add NEXT_PUBLIC_SOLANA_RPC_URL
+vercel env add VITE_PUBLIC_SOLANA_RPC_URL
 
 # Paste your full Helius RPC URL when prompted:
 # https://devnet.helius-rpc.com/?api-key=YOUR_KEY
@@ -70,7 +70,7 @@ vercel env add NEXT_PUBLIC_SOLANA_RPC_URL
 # Select: Production, Preview, Development
 
 # Add network variable
-vercel env add NEXT_PUBLIC_SOLANA_NETWORK
+vercel env add VITE_PUBLIC_SOLANA_NETWORK
 
 # Enter: devnet
 
@@ -106,12 +106,12 @@ Add to Vercel (all environments):
 
 ```bash
 # Required - Use full RPC URL (more secure than separate API key)
-NEXT_PUBLIC_SOLANA_RPC_URL=https://devnet.helius-rpc.com/?api-key=your-key-here
-NEXT_PUBLIC_SOLANA_NETWORK=devnet
+VITE_PUBLIC_SOLANA_RPC_URL=https://devnet.helius-rpc.com/?api-key=your-key-here
+VITE_PUBLIC_SOLANA_NETWORK=devnet
 
 # Optional
-NEXT_PUBLIC_PRIVACY_CASH_PROGRAM_ID=9fhQBbumKEFuXtMBDw8AaQyAjCorLGJQiS3skWZdQyQD
-NEXT_PUBLIC_SHADOWPAY_API_BASE=https://shadow.radr.fun/shadowpay
+VITE_PUBLIC_PRIVACY_CASH_PROGRAM_ID=9fhQBbumKEFuXtMBDw8AaQyAjCorLGJQiS3skWZdQyQD
+VITE_PUBLIC_SHADOWPAY_API_BASE=https://shadow.radr.fun/shadowpay
 ```
 
 ### Why This is Safe
@@ -209,17 +209,17 @@ If Helius doesn't work for you:
 
 ### QuickNode
 ```
-NEXT_PUBLIC_SOLANA_RPC_URL=https://your-quicknode-endpoint.solana-devnet.quiknode.pro/YOUR_KEY/
+VITE_PUBLIC_SOLANA_RPC_URL=https://your-quicknode-endpoint.solana-devnet.quiknode.pro/YOUR_KEY/
 ```
 
 ### Alchemy
 ```
-NEXT_PUBLIC_SOLANA_RPC_URL=https://solana-devnet.g.alchemy.com/v2/YOUR_KEY
+VITE_PUBLIC_SOLANA_RPC_URL=https://solana-devnet.g.alchemy.com/v2/YOUR_KEY
 ```
 
 ### GenesysGo (Mainnet only)
 ```
-NEXT_PUBLIC_SOLANA_RPC_URL=https://ssc-dao.genesysgo.net/
+VITE_PUBLIC_SOLANA_RPC_URL=https://ssc-dao.genesysgo.net/
 ```
 
 ## Cost Estimate
